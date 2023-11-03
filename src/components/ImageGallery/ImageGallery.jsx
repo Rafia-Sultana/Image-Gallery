@@ -56,7 +56,7 @@ const ImageGallery = () => {
   return (
     <div className='bg-gray-100 min-h-screen w-screen flex flex-row items-center justify-center md:p-4 lg:p-8 '>
     
-    <section className="w-4/6 px-6  sm:w-full bg-white rounded-lg shadow">
+    <section className="lg:w-10/12 md:w-3/4 px-6  sm:w-full bg-white rounded-lg shadow">
       <Navbar selectTinyPics={selectTinyPics} handleDeleteImg={handleDeleteImg} />
    
 <hr/>
