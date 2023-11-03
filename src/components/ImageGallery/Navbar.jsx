@@ -1,6 +1,17 @@
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Navbar = ({ handleDeleteImg, selectTinyPics }) => {
+  const handleDelete = () => {
+  
+    toast.error('Deletion completed!', {
+      position: 'top-right',
+      autoClose: 3000, 
+    });
+    handleDeleteImg();
+  }
   return (
     <nav className="flex flex-col md:flex-row justify-between items-center p-6">
 
@@ -28,7 +39,7 @@ const Navbar = ({ handleDeleteImg, selectTinyPics }) => {
       </div>
 
       <div className="mt-2 md:mt-0 lg:mt-0">
-        <button className="text-red-500 font-medium" onClick={handleDeleteImg}>
+        <button className="text-red-500 font-medium" onClick={handleDelete}>
           Delete files
         </button>
       </div>

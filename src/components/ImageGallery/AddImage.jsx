@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import { BsImage } from 'react-icons/bs';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddImage = ({ handleFileChange }) => {
   const fileInputRef = useRef();
@@ -11,6 +13,11 @@ const AddImage = ({ handleFileChange }) => {
   const handleInputChange = (e) => {
     const files = e.target.files;
     handleFileChange(files);
+
+    toast.success('Added successfully!', {
+      position: 'top-right',
+      autoClose: 3000, 
+    });
   };
 
   return (
@@ -30,6 +37,7 @@ const AddImage = ({ handleFileChange }) => {
         <BsImage size={20} />
         <span className="whitespace-nowrap px-4">Add Images</span>
       </div>
+      <ToastContainer />
     </div>
   );
 };
