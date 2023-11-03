@@ -14,7 +14,7 @@ const AddImage = ({ handleFileChange }) => {
     const files = e.target.files;
     handleFileChange(files);
 
-    toast.success('Added successfully!', {
+    toast.success('Added Successfully!', {
       position: 'top-right',
       autoClose: 3000, 
     });

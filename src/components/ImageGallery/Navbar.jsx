@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Navbar = ({ handleDeleteImg, selectTinyPics }) => {
   const handleDelete = () => {
   
-    toast.error('Deletion completed!', {
+    toast.error('Deleted Successfully!', {
       position: 'top-right',
       autoClose: 3000, 
     });
